@@ -1,0 +1,59 @@
+<!-- html>head+body -->
+<html>
+<head>
+
+    <!-- attribute (속성) : element(요소)의 부가 정보 -->
+    <!-- 시작태그에 작성됨 -->
+    <!-- 속성명="속성값" 형식으로 작성됨 -->
+    <p title="이렇게 말이지">마우스를 가져다대면 글이 나옴</p>
+
+</head>
+<body>
+
+    <!-- URL을 첨부하여 클릭하면 해당 URL로 이동 -->
+    <a href="https://www.naver.com/">네이버로 이동</a>
+    <br>
+    <br>
+    <!-- 
+        이미지사진을 불러올때 사용하는 태그 
+        넓이와 높이는 width와 height로 조정할수있어
+    -->
+    <img src="한강.jpeg" width="300" height="300" title="한강 풍경" alt="한강">
+    <!-- 이미지가 없을때 나오는 현상(alt의 필요성) -->
+    <img src="풍경화.jpeg" alt="거리풍경">
+    <br>
+    <br>
+    <!-- style이라는 attribute를 사용하면 글씨에 색, 모양, 위치, 크기 등등을 표현 할 수 있지 -->
+    <!-- h1[style]*3>lorem2 을 하면 모든 라인에 style을 바로 지정해줄수 있어 -->
+    <h1 style="color:blue;">Architecto, fugiat dolores.</h1>
+    <h1 style="color:red;">Debitis, expedita repudiandae.</h1>
+    <br>
+    <br>
+    <!-- 
+        색을 명명도 가능하지만 RGB값을 이용해서 칠 할 수도 있어 
+        물론 글씨 바탕도 마찬가지
+    -->
+    <!-- text-align을 통한 글자 위치 지정은 보너스 -->
+    <h1 style="color: rgb(0,255,0); background-color: rgb(0,0,255);text-align:left">Voluptatem perferendis architecto corporis?</h1>
+    <h1 style="color: rgb(54,12,34); background-color: rgb(255,0,0);text-align:center">Ipsa est repellat quis.</h1>
+    <h1 style="color: rgb(4,85,64); background-color: rgb(255,97,55);text-align:right">Rerum facilis quod dolor.</h1>
+    <h1 style="color: rgb(85,97,168);">Atque, error aliquam!</h1>
+    
+    <!-- hex(16진법을 통한 색칠 (#00,00,00) ex)255 == ff) -->
+    <!-- 가장 밑의 색은 위의 rgb예의 가장 밑과 같은 색이다 -->
+    <h1 style="color: #ff0000">Lorem, ipsum dolor.</h1>
+    <h1 style="color: #0000ff">Dolorem, sint eius.</h1>
+    <h1 style="color: #00ff00">Atque, error aliquam!</h1>
+    <h1 style="color: #5561a8">Atque, error aliquam!</h1>
+
+    <!-- hex 사용시 중복되는 6자리는 3자리로 표현가능 -->
+    <h1 style="color : #aa22cc;">Lorem, ipsum.</h1>
+    <h1 style="color : #a2c">Neque, eveniet!</h1>
+    <h1 style="color : #fff">In, non.</h1>
+    <h1 style="color : #000">A, cupiditate?</h1>
+    <h1 style="color : #ddd">Minus, quas!</h1>
+
+    <!-- RGBA로 표현하기 A는 알파로써 투명도를 뜻한다. 0 ~ 1 사이의 수로 표현 -->
+    <h1 style="position : absolute; top:64px; color:green; background-color:rgba(255,255,255,0.4);">한강</h1>
+</body>
+</html>
