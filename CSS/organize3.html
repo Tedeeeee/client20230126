@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 
+        밑에 있는 코드들은 모두 attribute로 적혀있던 style css를 
+        head로 가져와 더 간편하고 빠르게 알아볼수 있도록 정리해 놓았다.
+     -->
+    <!-- 
+    h1 {
+        color: greenyellow; 
+        background-color: chocolate;
+    }
+    
+    p {
+        color : gold;
+        background-color: cyan;
+    }
+    h2 {
+        color : yellow;
+        background-color: green;
+    } -->
+
+    <!-- 
+        하지만 한 파일에 너무 길고 많은 태그들과 글이 적혀있다면 
+        아무리 정리가 잘된 글이라 할지라도 정신이 없기 마련이다.
+        그래서 밑에 있는 방식대로 따로 css파일을 만들어 거기에 적어두고
+        외부파일로 취급하여 가져오는 방식을 선호한다. 이 방식은 눈으로 
+        보기도 파악하기도 편하며 수정또한 쉽다는 장점을 가지고 있다
+     -->
+    <link rel="stylesheet" href="04style.css">
+
+    <!-- 
+        CSS syntax (css문법) 
+        selector { property : value; property: value; }
+    -->
+    <!--
+        selector는 다양한 표현으로 나타낼수있다.
+        * 해당 페이지의 모든 태그{ 
+            color : blue;
+        }
+
+        h1, h2, p 여러개의 태그가 같은 css를 사용할때{
+            text-align : center;
+        }
+     -->
+</head>
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h1>Dignissimos, amet. At!</h1>
+    <h2>Lorem, ipsum.</h2>
+    <h2>Ipsa, aperiam!</h2>
+    <h2>Excepturi, architecto?</h2>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Repellendus explicabo qui totam!</p>
+    <p>Error vel consequatur perferendis.</p>
+</body>
+</html>
