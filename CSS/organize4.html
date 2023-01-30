@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color : yellow;
+        }
+
+        #head1 {
+            color : blue;
+        }
+        
+        #my head {
+            color : blue;
+        }
+
+        #myhead {
+            color : yellow;
+        }
+
+        #myHead {
+            color : hotpink;
+        }
+
+        #yourHead {
+            position:absolute;
+        }
+
+        #3head {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 한번에 작성할때 괄호에 넣어서 만들기 -->
+    <h1 id="head1">Lorem, ipsum dolor.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <h1>Modi, aut magni.</h1>
+    <p>Nobis doloribus quos laboriosam cumque nisi!</p>
+    <h1>Earum, reprehenderit aut!</h1>
+    <p>Possimus numquam recusandae quo fugiat unde.</p>
+
+
+    <!-- id 속성 작성 규칙 -->
+    <!--
+    숫자로 시작하면 안됨 
+    대소문자 구분함 
+    빈칸 넣을수 없음
+    특수문자는 -,_만 사용가능
+    한 페이지에 같은 id를 여러번 사용할수 없음
+    -->
+    <!-- 이거 두개 다 불가능 -->
+    <h1 id="3head">Lorem, ipsum dolor.</h1>
+
+    <h1 id="my head">Lorem, ipsum dolor.</h1>
+
+    <!-- 이거는 사용 가능한 특수기호 -->
+    <h1 id="my-head">Lorem, ipsum dolor.</h1>
+    <h1 id="my_head">Lorem, ipsum dolor.</h1>
+
+    <!-- 대소문자를 구분하기 때문에 가능 -->
+    <h1 id="yourhead">Lorem, ipsum dolor.</h1>
+    <h1 id="yourHead">Neque, libero fuga?</h1>
+
+    <!-- 같은 아이디 사용 불가능 -->
+    <h1 id="hishead">Lorem, ipsum dolor.</h1>
+    <h1 id="hishead">Lorem, ipsum dolor.</h1>
+
+    <!-- 중복되지 않게 영문,숫자,-,_만 사용 -->
+    <h1 id="my head">Lorem, ipsum dolor.</h1>
+    <h1 id="myhead">Lorem, ipsum dolor.</h1>
+    <h1 id="myHead">Lorem, ipsum dolor.</h1>
+    <h1 id="yourHead">Lorem, ipsum dolor.</h1>
+    <h1 id="yourHead">Voluptas, ipsum quod.</h1>
+    <h1 id="3head">Lorem, ipsum dolorfff.</h1>
+
+    <!-- emmet : #이 id 속성임 -->
+    <!-- h1 -->
+    <h1></h1>
+
+    <!-- h1#hishead -->
+    <h1 id="hishead"></h1>
+
+    <!-- h1#your-head -->
+    <h1 id="your-head"></h1>
+
+    <!-- h1#herHead>lorem3 -->
+    <h1 id="herHead">Lorem, ipsum dolor.</h1>
+
+    <!-- (h1#head$)*2 -->
+    <h1 id="head1"></h1>
+    <h1 id="head2"></h1>
+
+    <!-- (h1#jackHead$>lorem3)*3 -->
+    <h1 id="jackHead1">Lorem, ipsum dolor.</h1>
+    <h1 id="jackHead2">Numquam, deserunt corporis.</h1>
+    <h1 id="jackHead3">Mollitia, similique nam.</h1>
+
+</body>
+</html>

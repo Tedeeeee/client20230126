@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        /* 선택자를 띄어쓰기 없이 연속 작성 */
+        /* 모든 조건을 만족하는 요소 선택 */
+        p.note {
+            background-color: yellow;
+        }
+
+        p.error {
+            text-decoration: line-through;
+        }
+
+        p.error.note {
+            border: 5px solid;
+        }
+
+        .note.error {
+            border: 10px dotted black;
+        }
+
+        h1.note.error {
+            text-align: right;
+        }
+
+        /* 좀 더 자세하게 선택할수록 우선순위가 높다. */
+        /*
+            specificity
+            element selector : 1점
+            class selector : 10점
+            id selector : 100점 
+         */
+
+         li {
+            text-decoration: underline;
+        }
+
+        /* > : 자식 선택자 */
+        ul>li {
+            color:blue;
+        }
+
+        .todo>li {
+            background-color: yellow;
+        }
+
+        /* 부모요소가 note 클래스인 li 요소들의 정렬을 오른쪽 */
+        .note>li {
+            text-align: right;
+        }
+
+        /* 자식 선택자 */
+        .sub>h1 {
+            color: blue;
+        }
+
+        /* 자손 선택자 - 띄어쓰기로 분별*/
+        .container h1{
+            border: 5px dotted;
+        }
+
+        /* 인접형제선택자 - 첫번째 요소와 가장 근접한 두번째 인자만 해당 */
+        h1 + p {
+            background-color: yellow;
+            color: coral;
+        }
+
+        /* 일반형제선택자 - 첫번째 요소 뒤로 나오는 두번째 요소 모두 해당*/
+        span ~ p {
+            background-color:  green;
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="note">h1 첫번째 줄</h1>
+    <h1 class="note">h1 두번째 줄</h1>
+    <h1 class="note error">h1 마지막 줄</h1>
+    <p class="note">p 첫번째 줄</p>
+    <p class="note error">p 두번째 줄</p>
+    <p class="note error">p 마지막 줄</p>
+
+    <!-- ul*2>li*3>lorem1 -->
+    <ul class="todo">
+        <li>Lorem.</li>
+        <li>Placeat?</li>
+        <li>Et.</li>
+    </ul>
+    <ul class="note">
+        <li>Lorem.</li>
+        <li>Mollitia.</li>
+        <li>Doloremque!</li>
+    </ul>
+
+<!-- .container>.sub>h1>lorem1 -->
+    <div class="container">
+        <h1>Lorem, ipsum.</h1>
+        <div class="sub">
+            <h1>Lorem.</h1>
+        </div>
+    </div>
+
+    <h1>Lorem, ipsum.</h1>
+</body>
+</html>

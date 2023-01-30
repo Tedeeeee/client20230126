@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        #head1, #head2 {
+            color : blue;
+        }
+
+        #para1 {
+            color :blueviolet;
+        }
+
+        .mypara {
+            text-decoration: underline;
+        }      
+        
+        .error {
+            background-color: green;
+            color : blue;
+            text-decoration: line-through;
+        }
+
+        .note {
+        background-color: yellow;
+        }
+
+        .delete {
+        text-decoration: line-through;
+        }
+
+        .special {
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="head1">Lorem, ipsum dolor.</h1>
+    <p class="mypara">Lorem, ipsum.</p>
+    <h1 id="head2">Earum, veniam sit?</h1>
+    <p class="mypara">Eius, possimus.</p>
+    <h1 class="error">Incidunt, suscipit molestiae!</h1>
+    <p class="error">Ipsa, quibusdam!</p>
+
+    <!-- class 속성은 영문,숫자,_,-조합으로 작성 -->
+    <!-- 중복 가능 -->
+
+    <!-- 하나의 요소는 빈칸으로 구분한 여러 클래스를 가질 수 있음 -->
+    <h1 class="error">Lorem, ipsum.</h1>
+    <h1 class="note">Quibusdam, voluptatem!</h1>
+    <h1 class="error">Amet, quasi?</h1>
+    <h1 class="note">Consequuntur, nulla?</h1>
+    <h1 class="note">Nemo, a?</h1>
+    <h1 class="delete">Sit, adipisci.</h1>
+    <h1 class="delete">Enim, in!</h1>
+    <h1 class="note delete">Perferendis, dolor!</h1>
+    <h1 class="note delete" >Officiis, corporis?</h1>
+    <h1 class="error note">Rerum, dicta.</h1>
+
+    <!-- h1.note*4 -->
+    <h1 class="note"></h1>
+    <h1 class="note"></h1>
+    <h1 class="note"></h1>
+    <h1 class="note"></h1>
+
+    <!-- (h1.note>lorem3)*3 -->
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note">Delectus, consequatur nam.</h1>
+    <h1 class="note">Quo, accusamus ipsam.</h1>
+
+    <!-- h1.note.error 순서 상관X-->
+    <h1 class="note error"></h1>
+    <h1 class="error note"></h1>
+
+    <!-- p.error.note*2>lorem3 -->
+    <p class="error note">Lorem, ipsum dolor.</p>
+    <p class="error note">Maiores, sequi. Veritatis!</p>
+
+    <!-- p#para1.error.special -->
+    <p id="para1" class="error special">글이 없었네</p>
+</body>
+</html>

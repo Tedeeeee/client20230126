@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        h1 {
+            color:blue;
+        }
+
+        p {
+            color:chocolate;
+        }
+
+        /* 선택자를 띄어쓰기 없이 연속 작성 */
+        /* 모든 조건을 만족하는 요소 선택 */
+        p.note {
+            background-color: yellow;
+        }
+
+        p.error {
+            text-decoration: line-through;
+        }
+
+        p.error.note {
+            border: 5px solid;
+        }
+
+        .note.error {
+            border: 10px dotted black;
+        }
+
+        h1.note.error {
+            text-align: right;
+        }
+
+    </style>    
+</head>
+<body>
+    <h1 class="note">h1 첫번째 줄</h1>
+    <h1 class="note">h1 두번째 줄</h1>
+    <h1 class="note error">h1 마지막 줄</h1>
+    <p class="note">p 첫번째 줄</p>
+    <p class="note error">p 두번째 줄</p>
+    <p class="note error">p 마지막 줄</p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ h1 {
+            color: blue;
+        }
+
+        /* title 속성이 있는 요소들 */
+        [title] {
+            text-decoration: underline;
+        }
+
+        /* p이면서 title속성이 있는 p요소들 */
+        p[title] {
+            border: 5px solid;
+        }
+
+        /*
+         h1을 조상으로 둔 [title]
+         하지만 element와 attribute가 띄어쓰기 돼있기 때문에 안됨
+         */
+        h1 [title] {
+            border: 5px dotted;
+        }
+
+        [title] {
+            color:blue;
+        }
+
+        [title=Hello]{
+            background-color: gold;
+        }
+
+        [title=World] {
+            background-color: chocolate;
+        }
+
+        div {
+            border: 5px solid;
+            color : blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- [ ] 안으로 자세하게 명명하여 CSS적용 -->
+    <h1>Lorem,<span title="inside">inpsrn</span> ipsum dolor.</h1>
+
+    <h1 title="world">H1타이틀</h1>
+    <h1>Minus?</h1>
+
+    <p title="hi css">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos veritatis eius expedita, quaerat nobis mollitia explicabo deleniti temporibus doloribus dolorum unde tempora optio nostrum odio eum voluptas labore! Quibusdam, quia.</p>
+    <p>Ullam repellat vel quo labore voluptas quos reiciendis veritatis nesciunt voluptatibus illo temporibus aut enim rerum deleniti nihil nostrum, ipsa, veniam nulla possimus. Ducimus esse eius cum. Natus, qui aperiam!</p>
+
+    <!-- [ ] 안으로 자세히 명명하여 CSS적용 -->
+    <h1 title="Hello">Lorem.</h1>
+    <h1 title="World">Magni.</h1>
+    <h1>A.</h1>
+    <h1>Laudantium.</h1>
+    <h1>Ex!</h1>
+
+    <!-- 상속 -->
+    <div>
+        Lorem.
+        <h1>Lorem.</h1>
+    </div>
+
+</body>
+</html>

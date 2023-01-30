@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <!-- id 속성 작성 규칙 -->
+    <!--
+    숫자로 시작하면 안됨 
+    대소문자 구분함 
+    빈칸 넣을수 없음
+    특수문자는 -,_만 사용가능
+    한 페이지에 같은 id를 여러번 사용할수 없음
+    -->
+    <!-- 이거 두개 다 불가능 -->
+    <h1 id="3head">Lorem, ipsum dolor.</h1>
+
+    <h1 id="my head">Lorem, ipsum dolor.</h1>
+
+    <!-- 이거는 사용 가능한 특수기호 -->
+    <h1 id="my-head">Lorem, ipsum dolor.</h1>
+    <h1 id="my_head">Lorem, ipsum dolor.</h1>
+
+    <!-- 대소문자를 구분하기 때문에 가능 -->
+    <h1 id="yourhead">Lorem, ipsum dolor.</h1>
+    <h1 id="yourHead">Neque, libero fuga?</h1>
+
+    <!-- 같은 아이디 사용 불가능 -->
+    <h1 id="hishead">Lorem, ipsum dolor.</h1>
+    <h1 id="hishead">Lorem, ipsum dolor.</h1>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        #para1 {
+            color: blueviolet;
+        }
+
+        .error {
+            text-align: center;
+        }
+
+        .special {
+            text-decoration: line-through;
+        }
+
+        .note {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- h1.note*4 -->
+    <h1 class="note"></h1>
+    <h1 class="note"></h1>
+    <h1 class="note"></h1>
+    <h1 class="note"></h1>
+
+    <!-- (h1.note>lorem3)*3 -->
+    <h1 class="note">Lorem, ipsum dolor.</h1>
+    <h1 class="note">Delectus, consequatur nam.</h1>
+    <h1 class="note">Quo, accusamus ipsam.</h1>
+
+    <!-- h1.note.error 순서 상관X-->
+    <h1 class="note error"></h1>
+    <h1 class="error note"></h1>
+
+    <!-- p.error.note*2>lorem3 -->
+    <p class="error note">Lorem, ipsum dolor.</p>
+    <p class="error note">Maiores, sequi. Veritatis!</p>
+
+    <!-- p#para1.error.special -->
+    <p id="para1" class="error special">글이 없었네</p>
+
+</body>
+</html>
