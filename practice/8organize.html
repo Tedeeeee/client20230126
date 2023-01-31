@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        #head1 { 
+            /* 두께, 모양, 색 */
+            /*
+                그리고 border뒤에 위치를 정해주면
+                이런식으로 적어주면 한번에 작성이 가능하다
+            */
+            border: 5px solid blue;
+        }
+        
+        #head2 {
+            /* 이렇게 따로 작성하는것도 가능하다 */
+            border-width: 20px;
+            border-style: double;
+            border-color: bisque;
+        }
+        
+        #head3 {
+            /* 위 오 아 왼 ( 위에서 부터 시계방향 ) */
+            border-style: solid dashed dotted double;
+            /* 위 오왼 아(3개만 줬을시) */
+            /* 상하  좌우(2개만 줬을시) */
+        }
+        /* 이와 같은 형태는 width,color도 포함이다. */
+        /* 
+            시계방향순서는 margin또한 같다.
+            마진은 영역설정에 가까워서 px단위를 많이 사용한다.
+         */
+         /* 
+            역시 시계방향순서는 padding 또한 같다.
+            여기서 line-height태그를 사용하면 만들어진 박스에
+            글씨를 정 가운데에 위치 시킬수있다. height:px의 기준에
+            맞춰 똑같이 쓰면 된다.
+        */
+        /*
+            content는 width(너비=가로), height(높이=세로)로 구성되어있다.
+            이거는 상하좌우가 없기때문에 순서는 따로 없다.
+        */
+        #box1 {
+            /* viewport width 기준 */
+            width: 50vw;
+
+            /* viewport height 기준 */
+            height: 50vh;
+        }
+        #box2 {
+            /* 부모 요소 기준 */
+            width: 50%;
+            height: 50%;
+        }
+
+        #box3 {
+            background-color: blue;
+            padding: 20px;
+            border: 10px solid gold;
+            height: 100px;
+            width: 50vw;
+            /* 너무 커져버린 탓에 만족할만한 그림이 나오지 않아
+                박스의 크기 한계를 정해두는 태그
+            */
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 id="head1">Lorem.</h1>
+    <h1 id="head2">Quibusdam!</h1>
+    <h1 id="head3">Inventore.</h1>
+    <h1 id="head4">Lorem.</h1>
+    <h1 id="head5">Quod!</h1>
+    <h1 id="head6">Deleniti?</h1>
+    <h1 id="head7">Eligendi?</h1>
+    <h1 id="head8">In?</h1>
+
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+</body>
+</html>

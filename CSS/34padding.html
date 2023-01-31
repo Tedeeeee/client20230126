@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        div {
+            border: 5px solid;
+        }
+        div:nth-child(even) {
+            color: blue;
+        }
+
+        #box1 {
+            padding-top: 7px;
+        }
+
+        #box2 {
+            padding-right: 10px;
+        }
+
+        #box3 {
+            padding-bottom: 20px;
+        }
+
+        #box4 {
+            padding-left: 14px;
+        }
+
+        #box5 {
+            padding-top: 20px;
+            padding-right: 10px;
+            padding-bottom: 7px;
+            padding-left: 15px;
+        }
+
+        #box6 {
+            /* 상 우 하 좌 */
+            padding: 20px 10px 7px 8px;
+        }
+
+        #box7 {
+            /* 상 좌우 하 */
+            padding: 20px 10px 9px;
+        }
+
+        #box8 {
+            /* 상하 좌우 */
+            padding: 39px 43px;
+        }
+
+        #box9 {
+            /* 전체 */
+            padding: 20px;
+        }
+
+        #box10 {
+            width: 100px;
+            margin: 0px auto 1000px;
+            height: 200px;
+            text-align: center;
+            /* 
+                box테두리를 크게 잡고 글씨를 가운데에 놓고 싶을떄
+                해당 태그를 사용하면 된다.
+             */
+            line-height: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+    <div id="box5">box5</div>
+    <div id="box6">box6</div>
+    <div id="box7">box7</div>
+    <div id="box8">box8</div>
+    <div id="box9">box9</div>
+    <div id="box10">box10</div>
+</body>
+</html>

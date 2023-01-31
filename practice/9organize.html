@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        h1 {
+            background-color: gold;
+        }
+
+        span {
+            background-color: beige;
+        }
+
+        h1 {
+            background-color: yellow;
+            display: inline;
+        }
+
+        a {
+            display: block;
+        }
+          /* display는 inline을 block으로 block을 inline으로 바꿔준다 */
+          /* 하지만 display: inline; 은
+            width, height, padding, margin을
+            예상하기 힘듦 그래서
+            width,height, padding,margin을
+            개발자가 원하는대로 그리고 같은 줄에 배치하고
+            싶을때 
+            display: inline-block*/
+
+            /* display:flex 설명은 43번 예제를 보는것이 좋다.
+                여기서 간단히 말하자면 커다란 block박스를
+                다른 block박스에 넣어 옆으로 차곡차곡 쌓는다
+            */
+
+        #icon1 {
+            font-size: 40px;
+        }
+
+        #icon2 {
+            color: red;
+        }
+
+    </style>
+    <!-- 아이콘 사용을 위한 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- 요소가 배치되는 방법 -->
+    <!-- #block -->
+    <!-- 1. 가장 넓은 너비를 갖는다. -->
+    <!-- 2. 새로운 줄에 배치된다. -->
+    <h1>Lorem.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti aliquam vel laboriosam nulla magni incidunt harum saepe molestias, placeat eum recusandae ipsum nobis quaerat reiciendis odit facere nam laborum eaque.</p>
+    <div></div>
+    
+    <hr>
+
+    <!-- #inline -->
+    <!-- 1.필요한 만큼의 너비만 갖는다. -->
+    <!-- 2.같은 줄에 배치된다. -->
+    <span>Lorem.</span>
+    <a href="https://www.naver.com/">네이버로 이동</a>
+    <img src="한강.jpeg" alt="여기에 사진업어 야">
+
+
+    <!-- 아이콘은 content옆에 적히고 작성된 아이콘 태그 옆으로 
+        다양한 움직임을 상징하는 태그를 또 붙여줄수있다    
+    -->
+    <i class="fa-solid fa-bomb"></i>
+    <i class="fa-brands fa-youtube"></i>
+
+    <span id="icon1">content<i class="fa-brands fa-youtube"></i></span>
+    <span id="icon2">content<i class="fa-solid fa-bomb"></i></span>
+    <span id="icon3">content<i class="fa-brands fa-youtube fa-beat"></i></span>
+    <span id="icon4">content<i class="fa-solid fa-bomb fa-fade"></i></span>
+    <span id="icon5">content<i class="fa-brands fa-youtube fa-bounce"></i></span>
+    <span id="icon6">content<i class="fa-solid fa-bomb"></i></span>
+</body>
+</html>
