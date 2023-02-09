@@ -9,50 +9,30 @@
     </style>
 </head>
 <body>
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2">
+        Quae?
+    </h1>
+    <h1 id="head3">
+        Debitis!
+    </h1>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    // 함수는 값
+        let heads = document.getElementsByTagName("h1");
+        console.log(heads[0].textContent);
+        console.log(heads[1].textContent);
+        console.log(heads[2].textContent);
 
-    // 함수 선언(function declaration)
-    function fname(param) {
-        // 코드들...
-    }
-
-    // 함수 표현식(Function Expression)
-    // 변수에 할당 가능
-    let d = function (param) {
-        // 코드들...
-        console.log("함수식으로 작성된 함수 내 코드들 실행...");
-    }
-
-    d(); 
-
-    // . 인수로 할당 가능
-    function e(param) {
-        
-    }
-
-    e(function(param) {
-        //명령문....
-        //명령문....
-    })
-
-
-    // 값으로 반환 가능
-    function f() {
-        return function() {
-            console.log("값으로 반환 가능");
+        for(let i = 0; i <heads.length; i++) {
+            console.log(heads[i].textContent);
         }
-    }
-    
-    //데이터 구조에 저장 가능
-    let g = ["css", function() {}];
-    let h = { 
-        name : "park",
-        walk : function() {}
-    };
 
+        heads[1].textContent = "HI, JAVASCRIPT";
+        heads[2].remove();
     </script>
 </body>
 </html>

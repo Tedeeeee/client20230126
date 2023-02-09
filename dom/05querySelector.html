@@ -10,49 +10,31 @@
 </head>
 <body>
 
+    <h1 id="head1">
+        Lorem.
+    </h1>
+    <h1 id="head2" class="note">
+        Officia?
+    </h1>
+    <h1 id="head3" class="note">
+        Vel.
+    </h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-    // 함수는 값
+    let elem1 = document.querySelector("#head1");
+    console.log(elem1.textContent);
 
-    // 함수 선언(function declaration)
-    function fname(param) {
-        // 코드들...
-    }
+    let elem2 = document.querySelector("#head2");
+    console.log(elem2.textContent);
 
-    // 함수 표현식(Function Expression)
-    // 변수에 할당 가능
-    let d = function (param) {
-        // 코드들...
-        console.log("함수식으로 작성된 함수 내 코드들 실행...");
-    }
+    let elem3 = document.querySelector(".note");
+    console.log(elem3.textContent);
 
-    d(); 
-
-    // . 인수로 할당 가능
-    function e(param) {
-        
-    }
-
-    e(function(param) {
-        //명령문....
-        //명령문....
-    })
-
-
-    // 값으로 반환 가능
-    function f() {
-        return function() {
-            console.log("값으로 반환 가능");
-        }
-    }
+    let elem4 = document.querySelector("h1");
     
-    //데이터 구조에 저장 가능
-    let g = ["css", function() {}];
-    let h = { 
-        name : "park",
-        walk : function() {}
-    };
+    console.log(elem4.id);
 
+    
     </script>
 </body>
 </html>
