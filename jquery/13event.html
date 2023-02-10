@@ -9,37 +9,26 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
-
+    <h1>Lorem.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, a quos explicabo, recusandae hic ab repudiandae nulla iure nihil, omnis culpa reiciendis atque dicta dolore delectus labore modi cum repellendus.</p>
+    <h2>Lorem.</h2>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jquery  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        // jquery 
-        $("#input2").keyup(function(e){
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`);
-                this.val("");
-            }
-        })
-        
-        // 자바스크립트 코드(vanilla javascript)
-        document.querySelector("#input1").addEventListener("keyup", function (e) {
-            if(e.key === "Enter") {
-                let li = document.createElement("li");
-                li.textContent = this.value;
-                document.querySelector("#list1").append(li);
-                this.value = "";
-            }
-        })
+    
+    $("h1").on("click", function () {
+        console.log("h1 클릭됨");
+    });
 
+    $("p").on("click", function () {
+        console.log("p 클릭됨");
+    });
+
+    $("h2").on("click",function () {
+        console.log("h2 클릭됨");
+    })
+    //body에 작성된 property에 바로 작성하면 나중에 수정하기 힘들다.
 
 
     </script>

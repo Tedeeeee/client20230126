@@ -9,38 +9,33 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
-
-    <hr>
-
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
-
+    <h1 id="head1">
+        Lorem, ipsum.</h1>
+    <h1 id="head2">
+        Sunt, delectus?</h1>
+    <h1 id="head3">
+        Sapiente, molestias.</h1>
+    <h1 id="head4">
+        Fugiat, quasi?</h1>
+    <h1 id="head5">
+        Voluptate, odit.</h1>    
+    <h1 id="head6">
+        Voluptate, odit.</h1>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jquery  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        // jquery 
-        $("#input2").keyup(function(e){
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`);
-                this.val("");
-            }
-        })
-        
-        // 자바스크립트 코드(vanilla javascript)
-        document.querySelector("#input1").addEventListener("keyup", function (e) {
-            if(e.key === "Enter") {
-                let li = document.createElement("li");
-                li.textContent = this.value;
-                document.querySelector("#list1").append(li);
-                this.value = "";
-            }
-        })
 
+    let head1 = $("#head1");
+    head1.hide(1000);
 
+    let head2 = $("#head2");
+    head2.hide(2000);
+
+    $("#head3").hide(3000);
+    $("#head4").hide(4000);
+    $("#head5").hide(5000);
+    $("#head6").hide(6000);
 
     </script>
 </body>

@@ -9,38 +9,34 @@
     </style>
 </head>
 <body>
-    <input type="text" id="input1">
-    <ul id="list1"></ul>
 
-    <hr>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Magnam, eius. Sequi, expedita itaque!</p>
+    <p>Quas dicta reiciendis provident minus!</p>
+    <p>Dolor, quo. Quia, laborum minima.</p>
+    <p>Reprehenderit tempora quidem eos non?</p>
+    <p>Unde temporibus ullam eum quia.</p>
+    <p>Commodi reiciendis debitis amet enim.</p>
+    <p>Voluptates possimus incidunt maiores velit?</p>
+    <p>Quaerat dolorem blanditiis provident incidunt.</p>
+    <p>Consequuntur ab id minima! In?</p>
 
-    <input type="text" id="input2">
-    <ul id="list2"></ul>
-
-
+    <button>나타나기</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jquery  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        // jquery 
-        $("#input2").keyup(function(e){
-            if(e.key === "Enter"){
-                $("#list2").append(`<li>${$(this).val()}</li>`);
-                this.val("");
-            }
-        })
-        
-        // 자바스크립트 코드(vanilla javascript)
-        document.querySelector("#input1").addEventListener("keyup", function (e) {
-            if(e.key === "Enter") {
-                let li = document.createElement("li");
-                li.textContent = this.value;
-                document.querySelector("#list1").append(li);
-                this.value = "";
-            }
-        })
+        // p요소가 클릭되면
+        // p요소가 fadeout되도록 
+        $("p").on("click", function () {
+            $("p").fadeOut(1000);
+        });
 
+        //button이 클릭되면
+        //모든 p요소가 fadein되도록
 
+        $("button").on("click",function () {
+            $("p").fadeIn(1000)
+        })
 
     </script>
 </body>
