@@ -7,44 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
     </style>
+    <script>
+        //script를 위에 작성할때 문서가 다 작성되고 나서 script를 적용시키려고 할때 사용
+        window.addEventListener("DOMContentLoaded",function () {
+            console.log(document.querySelector("h1"));
+        })
+    </script>
 </head>
 <body>
-    <h1 id="res">효과보는곳</h1>
+    <h1>Lorem.</h1>
 
-    <button id="button1">1번</button>
-    <button id="button2">2번</button>
-    <button id="button3">오른쪽 클릭3</button>
-    <button id="button4">더블 클릭</button>
-    <button id="button5">포인터 들어옴</button>
-    <button id="button6">포인터 나감</button>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $("#button1").on("click",function () {
-            $("#res").text("1번 버튼 클릭함");
-        });
 
-        $("#button2").click(function() {
-            $("#res").text("2번 버튼 클릭함");
-        });
-
-        $("#button3").contextmenu(function () {
-            $("#res").text("3번 버튼 오른쪽 클릭됨");
-        });
-
-        $("#button4").dblclick(function () {
-            $("#res").text("더블클릭함");
-        });
-
-        $("#button5").mouseenter(function () {
-            $("#res").text("마우스 포인터 들어옴");
-        });
-
-        $("#button6").mouseleave(function () {
-            $("#res").text("마우스 포인터 나감");
-        });
-        
-    </script>
 </body>
 </html>

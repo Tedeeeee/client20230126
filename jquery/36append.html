@@ -9,42 +9,27 @@
     </style>
 </head>
 <body>
-    <h1 id="res">효과보는곳</h1>
-
-    <button id="button1">1번</button>
-    <button id="button2">2번</button>
-    <button id="button3">오른쪽 클릭3</button>
-    <button id="button4">더블 클릭</button>
-    <button id="button5">포인터 들어옴</button>
-    <button id="button6">포인터 나감</button>
-    
+    <input type="text" id="input1">
+    <ul id="list1">
+        <li>Lorem.</li>
+    </ul>
+    </input>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        $("#button1").on("click",function () {
-            $("#res").text("1번 버튼 클릭함");
-        });
+    $("#input1").keyup(function (e) {
+        if(e.key === "Enter") {
+            let content = $("#input1").val();
+            let liElem = $("<li></li>");
+            liElem.text(content);
 
-        $("#button2").click(function() {
-            $("#res").text("2번 버튼 클릭함");
-        });
+            $("#list1").append(liElem);
 
-        $("#button3").contextmenu(function () {
-            $("#res").text("3번 버튼 오른쪽 클릭됨");
-        });
+            $("#input1").val(" ");
+        }
+    });
 
-        $("#button4").dblclick(function () {
-            $("#res").text("더블클릭함");
-        });
 
-        $("#button5").mouseenter(function () {
-            $("#res").text("마우스 포인터 들어옴");
-        });
-
-        $("#button6").mouseleave(function () {
-            $("#res").text("마우스 포인터 나감");
-        });
-        
     </script>
 </body>
 </html>
